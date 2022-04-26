@@ -1,0 +1,5 @@
+library(ggplot2)
+library(pheatmap)
+args = commandArgs(T)
+data <- read.delim(args[1],header = T,row.names = 1)
+pheatmap(data,scale="row",cellheight = 20,cellwidth=25,filename=args[2])
